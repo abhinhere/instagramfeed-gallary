@@ -1,6 +1,5 @@
 
 import InstagramFeed from "@/components/InstagramFeed";
-import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
 
 const Index = () => {
@@ -15,18 +14,8 @@ const Index = () => {
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800">InstaGallery</h1>
             </div>
             <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-              Beautiful moments captured and shared. My Instagram journey in one stunning gallery.
+              Gallary
             </p>
-          </div>
-          <div className="text-center">
-            <Button 
-              className="bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:opacity-90 font-medium" 
-              size="lg"
-              onClick={() => window.open("https://instagram.com", "_blank")}
-            >
-              <Instagram className="w-4 h-4 mr-2" />
-              Follow on Instagram
-            </Button>
           </div>
         </div>
         
@@ -39,31 +28,11 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8 md:py-16 max-w-6xl -mt-6 relative z-10">
         <div className="mb-10 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Latest Posts</h2>
-          <p className="text-gray-600">Explore my Instagram feed gallery</p>
+          <p className="text-gray-600">Instagram feed gallery</p>
         </div>
         
         <InstagramFeed />
       </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-50 py-8 border-t">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-600 text-sm">
-            &copy; {new Date().getFullYear()} InstaGallery. Built with React & Tailwind CSS.
-          </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <a href="#" className="text-gray-500 hover:text-gray-800 transition-colors">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-gray-500 hover:text-gray-800 transition-colors">
-              Terms of Service
-            </a>
-            <a href="#" className="text-gray-500 hover:text-gray-800 transition-colors">
-              Contact
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
