@@ -1,34 +1,57 @@
- body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f5f5f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+/* General Reset and Body Styling */
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
 
-    h1 {
-      margin-top: 20px;
-      color: #333;
-    }
+/* Page Title */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 2rem;
+}
 
-    .gallery-container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 2rem auto;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
+/* Masonry Grid Container */
+.grid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    iframe {
-      width: 100%;
-      border: none;
-    }
+/* Masonry Sizer for column calculation */
+.grid-sizer,
+.grid-item {
+  width: 33.33%; /* 3 columns by default */
+}
 
-    @media (max-width: 768px) {
-      .gallery-container {
-        margin: 1rem auto;
-      }
-    }
+/* Image Styles */
+.grid img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive for Tablets */
+@media (max-width: 768px) {
+  .grid-sizer,
+  .grid-item {
+    width: 50%;
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 480px) {
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+  }
+}
